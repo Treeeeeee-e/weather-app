@@ -18,3 +18,7 @@ main {
 	align-items: center;
 }
 
+.fiveday{
+    display: flex;
+	align-items: center;
+}
