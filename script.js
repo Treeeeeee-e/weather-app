@@ -13,3 +13,9 @@ if ("geolocation" in navigator) { //if broswer supports location
 } else {//if location is denied or not exist
   console.log("Geolocation is not available in your browser.");
 }
+function success(position){
+	latitude = position.coords.latitude;
+	longitude = position.coords.longitude;
+    console.log(latitude.longitude)
+    //print out the latitude and longitude to see if it was right
+}
