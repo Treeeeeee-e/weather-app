@@ -7,3 +7,9 @@ window.onload = function() {
      '/' +date.getFullYear();
      document.getElementById('date').innerHTML = dateString
 }    
+if ("geolocation" in navigator) { //if broswer supports location
+    navigator.geolocation.getCurrentPosition(success) //
+
+} else {//if location is denied or not exist
+  console.log("Geolocation is not available in your browser.");
+}
