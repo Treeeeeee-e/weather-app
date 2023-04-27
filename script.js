@@ -16,6 +16,6 @@ if ("geolocation" in navigator) { //if broswer supports location
 function success(position){
 	latitude = position.coords.latitude;
 	longitude = position.coords.longitude;
-    console.log(latitude.longitude)
+    console.log(latitude, longitude)
     //print out the latitude and longitude to see if it was right
 }
