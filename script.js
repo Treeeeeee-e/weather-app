@@ -5,6 +5,5 @@ window.onload = function() {
     const date = new Date()
     const dateString = (date.getMonth()+1) + '/' + date.getDate() +
      '/' +date.getFullYear();
-     document.getElementById('date').textContent = dateString
+     document.getElementById('date').innerHTML = dateString
 }    
-window.document.getElementById(button)
