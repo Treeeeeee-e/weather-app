@@ -19,3 +19,12 @@ function success(position){
     console.log(latitude, longitude)
     //print out the latitude and longitude to see if it was right
 }
+const btn = document.getElementById('getWeatherbtn');
+
+btn.addEventListener("click",function() {
+    let forecast = [["M", 52], ["Tu", 53], ["W", 54], ["Th", 55], ["F", 56]]
+    let forecastElements = document.getElementsByClassName("forecast");
+    for (let i = 0; i < forecast.length; i++) {
+        forecastElements[i].innerHTML = forecast[i][0] + ": " + forecast[i][1] + "°F";
+      }
+});
