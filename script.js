@@ -19,7 +19,7 @@ function success(position){
     console.log(latitude, longitude)
     //print out the latitude and longitude to see if it was right
 }
-const btn = document.getElementById('getWeatherbtn');
+const btn = document.getElementById('getWeatherBtn');
 
 btn.addEventListener("click",function() {
     let forecast = [["M", 52], ["Tu", 53], ["W", 54], ["Th", 55], ["F", 56]]
