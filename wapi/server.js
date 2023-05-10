@@ -8,11 +8,11 @@ const API_KEY = `e3f24db3752c7c6d86c1af5dcc64797c`
 
 
 
-app.get('/weather/:lat/:lon', (req, res) => {
+app.get('/weather/:latitude/:longitude', (req, res) => {
   res.send('Hello World!');
   console.log("welcome to the root!");
-  let lon = req.params['lon']
-  let lat = req.params ['lat']
+  let lon = req.params['longitude']
+  let lat = req.params ['latitude']
 
 
 
