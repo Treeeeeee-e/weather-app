@@ -3,13 +3,22 @@ const request = require("request");
 
 const app = express();
 
-const API_KEY = `e3f24db3752c7c6d86c1af5dcc64797c`
+
+
+
+
 
 app.get('/', (req, res) => {
   res.send('Hello World!');
   console.log("welcome to the root!");
+
+const API_KEY = `e3f24db3752c7c6d86c1af5dcc64797c`
+let lon = 122.41942
+let lat = 37.77493
   
-  var url = "https://api.openweathermap.org/data/2.5/weather?lat=37.77493&lon=-122.41942&appid=e3f24db3752c7c6d86c1af5dcc64797c"
+  var url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=imperial`
+
+  
   
 	request(url, (error, response, body)=>{
 		
@@ -29,3 +38,4 @@ app.get('/', (req, res) => {
 app.listen(3000, () => {
   console.log('Example app listening on port 3000!');
 });
+
