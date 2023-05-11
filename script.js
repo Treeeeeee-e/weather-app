@@ -24,7 +24,7 @@ const btn = document.getElementById('getWeatherBtn');
 btn.addEventListener("click",function() {
  const xhr = new XMLHttpRequest();
 xhr.open("GET", `http://localhost:3000/weather/${latitude}/${longitude}`);
-xhr.send ();
+xhr.send();
 xhr.onload = function() {
      const body = JSON.parse(xhr.responseText) 
      let temperature = body.temperature;
