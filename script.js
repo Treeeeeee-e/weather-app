@@ -25,7 +25,7 @@ btn.addEventListener("click",function() {
  const xhr = new XMLHttpRequest();
 xhr.open("GET", `http://localhost:3000/weather/${latitude}/${longitude}`);
 xhr.send();
-xhr.onload = function() {
+xhr.onload  = function() {
      const body = JSON.parse(xhr.responseText) 
      let temperature = body.temperature;
      let weatherStatus = body.weatherStatus;
@@ -37,15 +37,15 @@ xhr.onload = function() {
 //-----------------------5day forecast (xhr2)----------------------------- 
 
 const xhr2 = new XMLHttpRequest();
-xhr2.open("GET", `http://localhost:3000/weather/${latitude}/${longitude}`);
+xhr2.open("GET", `http://localhost:3000/5day/${latitude}/${longitude}`);
 xhr2.send();
 
 xhr2.onload = function() {
-	const body = JSON.parse(xhr.responseText)
-    let forecast = body.forecast;
+	const body = JSON.parse(xhr2.responseText)
+    let forecast = body;
     let forecastElements = document.getElementsByClassName("forecast");
     for (let i= 0; i < forecast.length; i++){
-        forecastElements[i].innerHTML = `${forecast[i].dayName}: ${forecast[i].temp}°F`;
+        forecastElements[i].innerHTML = `${forecast[i].dayName}: ${forecast[i].temp}\u00b0F`;
     }
     
 
@@ -55,9 +55,9 @@ xhr2.onload = function() {
     
       }
 });
-let forecast = [["M", 52], ["Tu", 53], ["W", 54], ["Th", 55], ["F", 56]]
-    let forecastElements = document.getElementsByClassName("forecast");
-    for (let i = 0; i < forecast.length; i++) {
-        forecastElements[i].innerHTML = forecast[i][0] + ": " + forecast[i][1] + "°F";
+//let forecast = [["M", 52], ["Tu", 53], ["W", 54], ["Th", 55], ["F", 56]]
+    //let forecastElements = document.getElementsByClassName("forecast");
+    //for (let i = 0; i < forecast.length; i++) {
+       // forecastElements[i].innerHTML = forecast[i][0] + ": " + forecast[i][1] + "°F";
 
-    }
+    
